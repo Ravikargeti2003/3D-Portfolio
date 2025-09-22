@@ -49,36 +49,43 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
+              <img src="/images/localseva.png" 
+               className="w-full h-auto object-contain" // ✅ important fix
+              alt="Ryde App Interface" />
             </div>
-            <div className="text-content">
+            <div className="text-content mt-[-100px] ">
+              
               <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
+                {/* On-Demand Rides Made Simple with a Powerful, User-Friendly App
+                called Ryde */}
+                Local Service Marketplace (Local Seva) – Service Provider Platform
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                Local Seva is a web application/platform connecting users with nearby service providers for various services.
               </p>
             </div>
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={libraryRef}>
-              <div className="image-wrapper bg-[#FFEFDB]">
+              <div className="image-wrapper bg-[#FFEFDB] flex items-center justify-center">
                 <img
-                  src="/images/project2.png"
+                  // src="/images/project2.png"
+                  src="/images/Ev-oltic.png"
                   alt="Library Management Platform"
+                  className="w-full h-auto object-contain scale-120"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
+              <h2>EV-oltic – Electric Vehicle Platform</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+              <div className="image-wrapper bg-[#FFE7EB] flex items-center justify-center">
+                <img src="/images/videochat.jpeg"
+                className="w-full h-auto object-contain scale-120"
+                 alt="YC Directory App" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Video Chat App</h2>
             </div>
           </div>
         </div>

@@ -291,14 +291,15 @@ const TechStack = () => {
 
   return (
     <div id="skills" className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-5">
+      <div className="w-full h-full md:px-10 px-5 mt-8 mb-8">
         <TitleHeader
           title="How I Can Contribute & My Key Skills"
           sub="🤝 What I Bring to the Table"
         />
+        <div className="mb-8"></div>
         
         {/* Main 3D Tech Stack Icons */}
-        <div className="tech-grid mb-16">
+        {/* <div className="tech-grid mb-16">
           {techStackIcons.map((techStackIcon, index) => (
             <div
               key={techStackIcon.name}
@@ -328,7 +329,7 @@ const TechStack = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Detailed Skills Section */}
         <div className="skills-categories">

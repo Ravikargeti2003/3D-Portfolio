@@ -94,7 +94,7 @@ const Experience = () => {
       id="experience"
       className="flex-center md:mt-40 mt-20 section-padding xl:px-0"
     >
-      <div className="w-full h-full md:px-20 px-5">
+      <div className="w-full h-full md:px-20 px-5 mt-8 mb-8">
         <TitleHeader
           title="Professional Work Experience"
           sub="💼 My Career Overview"
@@ -102,14 +102,43 @@ const Experience = () => {
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card) => (
+              
               <div key={card.title} className="exp-card-wrapper">
-                <div className="xl:w-2/6">
+                {/* <div className="xl:w-2/6">
                   <GlowCard card={card}>
                     <div>
                       <img src={card.imgPath} alt="exp-img" />
                     </div>
                   </GlowCard>
-                </div>
+                </div> */}
+                <div className="xl:w-2/6 ">
+  <GlowCard card={card}>
+    <div className="p-0">
+      {/* Company logo and name at the top */}
+      <div className="flex items-center gap-4 mb-8">
+        <img
+          src={card.logoPath}
+          alt="company-logo"
+          className="w-12 h-12 object-contain rounded-3xl"
+        />
+        <h2 className="font-semibold text-xl text-white">{card.companyName}</h2>
+      </div>
+
+      {/* Review content as bullet points */}
+      <div className="text-white-50">
+        <ul className="list-disc list-inside space-y-2 text-xlleading-relaxed">
+          {card.review.split('. ').map((sentence, index) => (
+            sentence.trim() && (
+              <li key={index} className="text-gray-300 pl-2">
+                {sentence.trim().endsWith('.') ? sentence.trim() : sentence.trim() + '.'}
+              </li>
+            )
+          ))}
+        </ul>
+      </div>
+    </div>
+  </GlowCard>
+</div>
                 <div className="xl:w-4/6">
                   <div className="flex items-start">
                     <div className="timeline-wrapper">
@@ -118,7 +147,9 @@ const Experience = () => {
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                       <div className="timeline-logo">
-                        <img src={card.logoPath} alt="logo" />
+                        <img src={card.logoPath} alt="logo"
+                         className="w-12 h-12 object-contain rounded-3xl"
+                        />
                       </div>
                       <div>
                         <h1 className="font-semibold text-3xl">{card.title}</h1>
