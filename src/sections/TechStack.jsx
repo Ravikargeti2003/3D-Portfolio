@@ -181,7 +181,8 @@ import gsap from "gsap";
 import { Suspense, useState } from "react";
 
 import TitleHeader from "../components/TitleHeader";
-import TechIconCardExperience from "../components/models/TechIconCardExperience";
+// import TechIconCardExperience from "../components/Models/TechIconCardExperience";
+// import TechIconCardExperience from "../components/models/TechIconCardExperience";
 import { techStackIcons, skillCategories } from "../constants";
 
 const TechStack = () => {
