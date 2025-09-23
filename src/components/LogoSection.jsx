@@ -1,9 +1,19 @@
 import { logoIconsList } from "../constants";
 
+ // detect specific logos
+  // const isSpecial =
+  //   icon.imgPath.includes("JavaScript") || icon.imgPath.includes("Gits");
+
 const LogoIcon = ({ icon }) => {
   return (
-    <div className="flex-none flex-center marquee-item">
-      <img src={icon.imgPath} alt={icon.name} />
+    <div className="flex-none flex-center marquee-item w-35 h-35 aspect-square">
+      <img src={icon.imgPath} alt={icon.name}
+      // className="max-w-full max-h-full object-contain"
+      // className={`max-w-full max-h-full object-contain ${
+      //     isSpecial ? "scale-75" : ""
+      //   }`}
+       className="w-4/3 h-4/3 object-contain"
+      />
     </div>
   );
 };
